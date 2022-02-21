@@ -16,23 +16,110 @@
     </header>
     <main class="w-3/4 block m-auto">
         <section>
-            <h2 class="text-4xl text-center font-bold mb-8">Income</h2>
-            <div class="grid grid-cols-3 gap-20">
-                <div class="block m-auto">
-                    <h3 class="text-2xl font-bold mb-4 text-center">Imcome Amount</h3>
+            <section class="mb-16 p-4">
+                <h2 class="text-4xl text-center font-bold mb-8">Income</h2>
+                <div class="grid grid-cols-3 gap-16">
+                    <div class="block m-auto">
+                        <h3 class="text-2xl font-bold mb-4 text-center">Imcome Amount</h3>
+                        <input type="number" id="income-amount" class="bg-gray-300 p-2 pr-8 pl-8 rounded-lg">
+                    </div>
+                    <div class="block m-auto">
+                        <h3 class="text-2xl font-bold mb-4 text-center">Imcome Sector</h3>
+                        <input type="text" id="income-sector" class="bg-gray-300 p-2 pr-8 pl-8 rounded-lg">
+                    </div>
+                    <div class="flex">
+                        <button onclick="addToTable(
+                            'income-amount', 'income-sector', 'total-income'
+                        )" class="bg-emerald-400 p-4 block m-auto rounded-lg font-bold">Add
+                            Income</button>
+                    </div>
+                </div>
+            </section>
+            <section class="mb-16">
+                <div>
+                    <div class="grid grid-cols-7 gap-16 border-2 border-solid border-black rounded p-8">
+                        <div class="border-2 border-solid border-black rounded-lg">
+                            <h3 class="font-bold text-center p-2">Serial</h3>
+                        </div>
+                        <div class="col-span-3 border-2 border-solid border-black rounded-lg">
+                            <h3 class="font-bold text-center p-2">Sector</h3>
+                        </div>
+                        <div class="col-span-2 border-2 border-solid border-black rounded-lg">
+                            <h3 class="font-bold text-center p-2">Amount</h3>
+                        </div>
+                        <div class="border-2 border-solid border-black rounded-lg">
+                            <h3 class="font-bold text-center p-2">Remove</h3>
+                        </div>
+                    </div>
+                    <div class="mt-14">
+                        <h2 class="text-3xl text-center font-bold">Total Income : <span id="total-income">00</span></h2>
+                    </div>
+            </section>
+        </section>
+        <section>
+            <section class="mb-16 p-4">
+                <h2 class="text-4xl text-center font-bold mb-8">Cost</h2>
+                <div class="grid grid-cols-3 gap-16">
+                    <div class="block m-auto">
+                        <h3 class="text-2xl font-bold mb-4 text-center">Cost Amount</h3>
+                        <input type="number" id="cost-amount" class="bg-gray-300 p-2 pr-8 pl-8 rounded-lg">
+                    </div>
+                    <div class="block m-auto">
+                        <h3 class="text-2xl font-bold mb-4 text-center">Cost Sector</h3>
+                        <input type="text" id="cost-sector" class="bg-gray-300 p-2 pr-8 pl-8 rounded-lg">
+                    </div>
+                    <div class="flex">
+                        <button onclick="addToTable('cost-amount', 'cost-sector', 'total-cost')"
+                            class="bg-emerald-400 p-4 block m-auto rounded-lg font-bold">Add
+                            Cost</button>
+                    </div>
+                </div>
+            </section>
+            <section class="mb-16">
+                <div>
+                    <div class="grid grid-cols-7 gap-16 border-2 border-solid border-black rounded p-8">
+                        <div class="border-2 border-solid border-black rounded-lg">
+                            <h3 class="font-bold text-center p-2">Serial</h3>
+                        </div>
+                        <div class="col-span-3 border-2 border-solid border-black rounded-lg">
+                            <h3 class="font-bold text-center p-2">Sector</h3>
+                        </div>
+                        <div class="col-span-2 border-2 border-solid border-black rounded-lg">
+                            <h3 class="font-bold text-center p-2">Amount</h3>
+                        </div>
+                        <div class="border-2 border-solid border-black rounded-lg">
+                            <h3 class="font-bold text-center p-2">Remove</h3>
+                        </div>
+                    </div>
+                    <div class="mt-14">
+                        <h2 class="text-3xl text-center font-bold">Total Cost : <span id="total-cost">00</span></h2>
+                    </div>
+            </section>
+        </section>
+        <section class="mb-8">
+            <div class="grid grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-right">Saving</h3>
+                </div>
+                <div>
                     <input type="number" class="bg-gray-300 p-2 pr-8 pl-8 rounded-lg">
                 </div>
-                <div class="block m-auto">
-                    <h3 class="text-2xl font-bold mb-4 text-center">Imcome Sector</h3>
-                    <input type="number" class="bg-gray-300 p-2 pr-8 pl-8 rounded-lg">
+                <div>
+                    <button class="bg-emerald-400 p-2 rounded-lg font-bold">Add
+                        saving</button>
                 </div>
-                <div class="flex">
-                    <button class="bg-emerald-400 p-4 block m-auto rounded-lg font-bold">Add
-                        Income</button>
-                </div>
+            </div>
+            <div class="mt-14">
+                <h2 class="text-3xl text-center font-bold">Total Saving : <span>00</span></h2>
+            </div>
+        </section>
+        <section class="mb-16">
+            <div>
+                <h2 class="text-3xl text-center font-bold">Balance : <span>00</span></h2>
             </div>
         </section>
     </main>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
